@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { fetchRequest } from "../../api";
 import DayPicture from "./components/DayPicture";
-import { PageContainer } from "./styled";
+import { PageContainer } from "../styled";
 
 export interface Picture {
   title: string;
