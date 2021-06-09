@@ -7,6 +7,7 @@ import GlobalStyles from "./styles/globalStyle";
 import ApolloPage from "./pages/ApolloPage";
 import { Router, Route, Switch } from "react-router-dom";
 import history from "./history";
+import AsteroidsPage from "./pages/AsteroidsPage";
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState<string>("dark");
@@ -22,6 +23,7 @@ const App: React.FC = () => {
         <Switch>
           <Route path="/" component={HomePage} exact />
           <Route path="/apollo" component={ApolloPage} exact />
+          <Route path="/asteroids" component={AsteroidsPage} exact />
         </Switch>
       </Router>
     </ThemeProvider>

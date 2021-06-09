@@ -22,6 +22,9 @@ const Header: React.FC<HeaderProps> = (props) => {
         <h2 id="apollo" onClick={(e) => handleClick(e)}>
           Apollo 11
         </h2>
+        <h2 id="asteroids" onClick={(e) => handleClick(e)}>
+          Asteroids
+        </h2>
       </div>
       <Switch themeChangeHandler={props.themeChangeHandler} />
     </HeaderWrapper>

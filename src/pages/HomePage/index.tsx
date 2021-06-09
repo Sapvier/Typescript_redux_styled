@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { fetchRequest } from "../../api";
 import DayPicture from "./components/DayPicture";
 import { PageContainer } from "../styled";
+import { Loader } from "../../styles/Loader";
 
 export interface Picture {
   title: string;
@@ -16,10 +17,12 @@ const HomePage: React.FC = () => {
     fetchRequest().then((result) => setPicture(result));
   }, []);
 
-  return (
+  return Object.keys({ ...picture }).length > 0 ? (
     <PageContainer>
       <DayPicture picture={picture} />
     </PageContainer>
+  ) : (
+    <Loader />
   );
 };
 

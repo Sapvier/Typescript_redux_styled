@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 export const PreviewWrapper = styled.div`
-  max-width: 45%;
+  max-width: 90%;
   height: auto;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
+  align-self: center;
 
   & img {
     max-width: 100%;
