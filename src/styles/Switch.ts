@@ -29,7 +29,7 @@ export const SwitchSlider = styled.span`
     content: "";
     height: 20px;
     width: 20px;
-    left: 2px;
+    left: 3px;
     top: 2px;
     background-color: white;
     -webkit-transition: 0.4s;

@@ -8,6 +8,28 @@ export interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = (props) => {
+  const links = [
+    {
+      id: "",
+      title: "Home",
+      keyId: 1,
+    },
+    {
+      id: "apollo",
+      title: "Apollo 11",
+      keyId: 2,
+    },
+    {
+      id: "asteroids",
+      title: "Asteroids",
+      keyId: 3,
+    },
+    {
+      id: "protected",
+      title: "Protected",
+      keyId: 4,
+    },
+  ];
   const handleClick = (e: React.MouseEvent<HTMLHeadingElement>) => {
     const id = (e.target as Element).id;
     history.push(`/${id}`);
@@ -16,15 +38,12 @@ const Header: React.FC<HeaderProps> = (props) => {
   return (
     <HeaderWrapper>
       <div>
-        <h2 id="" onClick={(e) => handleClick(e)}>
-          Home
-        </h2>
-        <h2 id="apollo" onClick={(e) => handleClick(e)}>
-          Apollo 11
-        </h2>
-        <h2 id="asteroids" onClick={(e) => handleClick(e)}>
-          Asteroids
-        </h2>
+        {links.map((item) => (
+          <h2 key={item.keyId} id={item.id} onClick={(e) => handleClick(e)}>
+            {" "}
+            {item.title}{" "}
+          </h2>
+        ))}
       </div>
       <Switch themeChangeHandler={props.themeChangeHandler} />
     </HeaderWrapper>

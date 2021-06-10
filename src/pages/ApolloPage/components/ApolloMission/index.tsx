@@ -52,9 +52,23 @@ const ApolloMission: React.FC<LandingData> = ({ landingData }) => {
             <Loader />
           )}
           <p>
-            Apollo 11 achieved its primary mission - to perform a manned lunar
-            landing and return the mission safely to Earth - and paved the way
-            for the Apollo lunar landing missions to follow.
+            After being sent to the Moon by the Saturn V's third stage, the
+            astronauts separated the spacecraft from it and traveled for three
+            days until they entered lunar orbit. Armstrong and Aldrin then moved
+            into Eagle and landed in the Sea of Tranquility on July 20. The
+            astronauts used Eagle's ascent stage to lift off from the lunar
+            surface and rejoin Collins in the command module. They jettisoned
+            Eagle before they performed the maneuvers that propelled Columbia
+            out of the last of its 30 lunar orbits onto a trajectory back to
+            Earth. They returned to Earth and splashed down in the Pacific Ocean
+            on July 24 after more than eight days in space. Armstrong's first
+            step onto the lunar surface was broadcast on live TV to a worldwide
+            audience. He described the event as "one small step for man, one
+            giant leap for mankind. Apollo 11 effectively proved US victory in
+            the Space Race to demonstrate spaceflight superiority, by fulfilling
+            a national goal proposed in 1961 by President John F. Kennedy,
+            "before this decade is out, of landing a man on the Moon and
+            returning him safely to the Earth.
           </p>
         </div>
         <ApolloMissionImage>
