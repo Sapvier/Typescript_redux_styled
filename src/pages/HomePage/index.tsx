@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { fetchRequest } from "../../api";
+import { fetchPictureOfTheDay } from "../../api";
 import DayPicture from "./components/DayPicture";
-import { PageContainer } from "../styled";
+
 import { Loader } from "../../styles/Loader";
+import { PageContainer } from "../../styles/styled";
 
 export interface Picture {
   title: string;
@@ -12,14 +13,18 @@ export interface Picture {
 
 const HomePage: React.FC = () => {
   const [picture, setPicture] = useState<Picture | null>(null);
+  const isLoaded = Object.keys({ ...picture }).length;
+  const getPicture = () => {
+    fetchPictureOfTheDay().then((result) => setPicture(result));
+  };
 
   useEffect(() => {
-    fetchRequest().then((result) => setPicture(result));
+    getPicture();
   }, []);
 
-  return Object.keys({ ...picture }).length > 0 ? (
+  return isLoaded ? (
     <PageContainer>
-      <DayPicture picture={picture} />
+      {picture ? <DayPicture picture={picture} /> : null}
     </PageContainer>
   ) : (
     <Loader />

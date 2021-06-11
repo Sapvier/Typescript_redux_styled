@@ -2,16 +2,11 @@ import React, { Dispatch } from "react";
 import { connect, ConnectedProps } from "react-redux";
 import { setAuth } from "../../store/auth/actions";
 import { Action } from "redux";
+import { StateMap } from "../../store/storeTypes";
 
-type StateMap = {
-  authReducer: {
-    isAuth: boolean;
-  };
-};
+type ProtectedProps = ConnectedProps<typeof connector>;
 
-type Props = ConnectedProps<typeof connector>;
-
-const ProtectedPage = ({ setIsAuth, isAuth }: Props) => {
+const ProtectedPage = ({ setIsAuth, isAuth }: ProtectedProps) => {
   const handler = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
     setIsAuth();

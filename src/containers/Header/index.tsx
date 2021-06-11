@@ -40,8 +40,7 @@ const Header: React.FC<HeaderProps> = (props) => {
       <div>
         {links.map((item) => (
           <h2 key={item.keyId} id={item.id} onClick={(e) => handleClick(e)}>
-            {" "}
-            {item.title}{" "}
+            {item.title}
           </h2>
         ))}
       </div>

@@ -1,7 +1,7 @@
-import { SAVE_ASTEROIDS_DATA } from "./types";
 import { AsteroidObject } from "../../api/types";
 import { ObjectData } from "../../pages/AsteroidsPage/types";
 import { ActionCreator } from "redux";
+import { SAVE_ASTEROIDS_DATA } from "../types";
 
 export interface saveAction {
   type: string;

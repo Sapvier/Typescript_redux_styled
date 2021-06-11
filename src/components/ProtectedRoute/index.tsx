@@ -1,10 +1,9 @@
 import { Redirect, Route, RouteProps } from "react-router";
-import { useAppSelector } from "../../store/store";
-import { IAppState } from "../../store/asteroids/reducer";
+import { IAppState } from "../../store/storeTypes";
+import { useAppSelector } from "../../store/utils";
 
 export default function ProtectedRoute({ ...routeProps }: RouteProps) {
   const isAuth = useAppSelector((state: IAppState) => state.authReducer.isAuth);
-
   if (isAuth) {
     return <Route {...routeProps} />;
   } else {

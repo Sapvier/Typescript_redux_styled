@@ -1,28 +1,31 @@
 import React, { useEffect, useState } from "react";
-import { fetchApolloMission } from "../../api";
-import { PageContainer } from "../styled";
 import ApolloMission from "./components/ApolloMission";
+import { fetchApolloMission } from "../../api";
+import { PageContainer } from "../../styles/styled";
 
 interface Object {
   href: string;
 }
 
-export interface Data {
+export interface ILandingData {
   href: string;
   items: Object[];
   version: string;
 }
 
 const ApolloPage = () => {
-  const [landingData, setLandingData] = useState<Data | null>(null);
+  const [landingData, setLandingData] = useState<ILandingData | null>(null);
+  const getApolloMission = () => {
+    fetchApolloMission().then((r) => setLandingData(r.collection));
+  };
 
   useEffect(() => {
-    fetchApolloMission().then((r) => setLandingData(r.collection));
+    getApolloMission();
   }, []);
 
   return (
     <PageContainer>
-      <ApolloMission landingData={landingData} />
+      {landingData ? <ApolloMission landingData={landingData} /> : null}
     </PageContainer>
   );
 };

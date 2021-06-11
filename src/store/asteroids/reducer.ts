@@ -1,16 +1,7 @@
-import { SAVE_ASTEROIDS_DATA } from "./types";
 import { Reducer } from "react";
 import { saveAction } from "./actions";
-import { IAuthState } from "../auth/reducer";
-
-export interface IAsteroidsState {
-  readonly datasets: object[] | undefined;
-}
-
-export interface IAppState {
-  readonly asteroidsReducer: IAsteroidsState;
-  readonly authReducer: IAuthState;
-}
+import { SAVE_ASTEROIDS_DATA } from "../types";
+import { IAsteroidsState } from "../storeTypes";
 
 const initialAsteroidsState: IAsteroidsState = {
   datasets: [],

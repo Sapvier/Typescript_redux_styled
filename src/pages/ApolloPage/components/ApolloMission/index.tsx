@@ -1,8 +1,9 @@
 import React from "react";
-import { Data } from "../..";
-import { PlayButton, PreviewWrapper } from "../../styled";
+import { ILandingData } from "../..";
+
 import VideoContent from "../VideoContent";
 import VideoModal from "../VideoModal";
+
 import {
   ApolloMissionContent,
   ApolloMissionImage,
@@ -10,12 +11,11 @@ import {
 } from "./styled";
 import mission from "../../../../assets/mission.jpg";
 import { Loader } from "../../../../styles/Loader";
+import { PlayButton, PreviewWrapper } from "../../styled";
 
-export interface LandingData {
-  landingData: Data | null;
-}
-
-const ApolloMission: React.FC<LandingData> = ({ landingData }) => {
+const ApolloMission: React.FC<{ landingData: ILandingData }> = ({
+  landingData,
+}) => {
   const [isVideoOpen, setIsVideoOpen] = React.useState<boolean>(false);
   const clickHandler = () => {
     setIsVideoOpen((state) => !state);
@@ -38,7 +38,7 @@ const ApolloMission: React.FC<LandingData> = ({ landingData }) => {
             Armstrong and Buzz Aldrin on July 20, 1969. The astronauts also
             returned to Earth the first samples from another planetary body.
           </p>
-          {landingData !== null ? (
+          {landingData ? (
             <PreviewWrapper>
               <PlayButton onClick={clickHandler} />
               <img

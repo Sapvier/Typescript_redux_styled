@@ -2,7 +2,7 @@ import { ApodObject, ApolloObject, AsteroidObject } from "./types";
 
 const API_KEY = "bkZUTwvHSL9b8G5QxhAJF0ElKIpknLLJDiQEVbNf";
 
-export const fetchRequest = (): Promise<ApodObject> => {
+export const fetchPictureOfTheDay = (): Promise<ApodObject> => {
   return fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`).then(
     (r) => r.json()
   );

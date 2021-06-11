@@ -1,20 +1,20 @@
 import styled from "styled-components";
 
 export const ApolloMissionWrapper = styled.div`
+  display: flex;
   width: 80%;
   height: auto;
-
-  display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   row-gap: 15px;
-  flex-direction: column;
+
   & h1 {
     margin: 0;
   }
   & p {
     max-width: 100%;
-    text-align: justify;
     margin: 0;
+    text-align: justify;
   }
 `;
 
@@ -24,8 +24,8 @@ export const ApolloMissionContent = styled.div`
   column-gap: 30px;
 
   & > div:first-child {
-    min-width: 50%;
     display: flex;
+    min-width: 50%;
     flex-direction: column;
     row-gap: 15px;
   }

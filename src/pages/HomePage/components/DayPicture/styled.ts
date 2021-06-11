@@ -11,17 +11,18 @@ export const ImgWrapper = styled.div`
 `;
 
 export const DayPictureWrapper = styled.div`
-  max-width: 100%;
   display: flex;
-  justify-content: flex-start;
+  max-width: 100%;
   flex-direction: column;
+  justify-content: flex-start;
 
   & > div {
-    max-width: 80%;
-    padding: 10px 0;
     display: flex;
-    justify-content: space-around;
+    max-width: 80%;
     flex-direction: row;
+    justify-content: space-around;
+
+    padding: 10px 0;
     & p {
       max-width: 22%;
       margin: 0;

@@ -1,10 +1,7 @@
-import { SET_IS_AUTH } from "./types";
+import { SET_IS_AUTH } from "../types";
 import { Reducer } from "react";
 import { saveAction } from "../asteroids/actions";
-
-export interface IAuthState {
-  readonly isAuth: boolean;
-}
+import { IAuthState } from "../storeTypes";
 
 const localStore = JSON.parse(localStorage.getItem("isAuth") || `null`);
 const parsed = localStore === null ? false : localStore;

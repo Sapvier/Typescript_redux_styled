@@ -2,40 +2,45 @@ import styled from "styled-components";
 
 export const SwitchWrapper = styled.label`
   position: relative;
+
   display: inline-block;
   width: 45px;
   height: 25px;
   & input {
-    opacity: 0;
     width: 0;
     height: 0;
+
+    opacity: 0;
   }
 `;
 
 export const SwitchSlider = styled.span`
   position: absolute;
-  cursor: pointer;
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
+  left: 0;
+
   background-color: rgba(0, 0, 0, 0.3);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
   border-radius: 34px;
+
+  cursor: pointer;
+  transition: 0.4s;
 
   &:before {
     position: absolute;
-    content: "";
-    height: 20px;
-    width: 20px;
-    left: 3px;
-    top: 2px;
-    background-color: white;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-    border-radius: 50%;
     z-index: 11;
+    top: 2px;
+    left: 3px;
+
+    width: 20px;
+    height: 20px;
+
+    background-color: white;
+    border-radius: 50%;
+
+    content: "";
+    transition: 0.4s;
   }
 `;
 export const SwitchEmojiSun = styled.span`
@@ -47,9 +52,9 @@ export const SwitchEmojiSun = styled.span`
 `;
 export const SwitchEmojiMoon = styled.span`
   position: absolute;
+  z-index: 10;
   top: 2px;
   right: 2px;
-  z-index: 10;
 
   font-size: 14px;
 `;
@@ -62,8 +67,6 @@ export const SwitchInput = styled.input`
     box-shadow: 0 0 2px grey;
   }
   &:checked + ${SwitchSlider}:before {
-    -webkit-transform: translateX(20px);
-    -ms-transform: translateX(20px);
     transform: translateX(20px);
   }
 `;

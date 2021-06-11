@@ -6,14 +6,14 @@ import {
   SwitchInput,
   SwitchSlider,
   SwitchWrapper,
-} from "../../styles/Switch";
+} from "./Switch";
 
 const Switch: React.FC<HeaderProps> = (props) => (
-  <SwitchWrapper className="switch">
+  <SwitchWrapper>
     <SwitchEmojiSun>☀️</SwitchEmojiSun>
     <SwitchEmojiMoon>🌙️</SwitchEmojiMoon>
     <SwitchInput type="checkbox" onChange={() => props.themeChangeHandler()} />
-    <SwitchSlider className="slider" />
+    <SwitchSlider />
   </SwitchWrapper>
 );
 

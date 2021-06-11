@@ -1,1 +1,2 @@
+export const SET_IS_AUTH = "SET_IS_AUTH";
 export const SAVE_ASTEROIDS_DATA = "SAVE_ASTEROIDS_DATA";

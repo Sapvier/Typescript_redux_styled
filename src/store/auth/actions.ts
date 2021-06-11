@@ -1,4 +1,4 @@
-import { SET_IS_AUTH } from "./types";
+import { SET_IS_AUTH } from "../types";
 import { ActionCreator } from "redux";
 import { saveAction } from "../asteroids/actions";
 

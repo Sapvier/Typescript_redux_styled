@@ -1,5 +1,3 @@
-import { State } from "./rootReducer";
-
 export const loadState = () => {
   try {
     const serializedState = localStorage.getItem("isAuth");
